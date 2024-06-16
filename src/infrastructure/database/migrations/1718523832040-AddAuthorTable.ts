@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class AddAccountTable1718522931379 implements MigrationInterface {
-    name = 'AddAccountTable1718522931379'
+export class AddAuthorTable1718523832040 implements MigrationInterface {
+    name = 'AddAuthorTable1718523832040'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`CREATE TYPE "public"."account_type_enum" AS ENUM('Cash', 'Debit Card', 'Credit Card', 'Savings', 'Investment', 'Loan', 'Other')`);

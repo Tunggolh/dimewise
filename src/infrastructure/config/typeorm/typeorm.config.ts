@@ -7,11 +7,11 @@ const config = new DataSource({
   username: process.env.DATABASE_USER,
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE_NAME,
-  entities: [__dirname + './../../**/*.entity{.ts,.js}'],
+  entities: ['src/infrastructure/database/entities/**/*{.ts,.js}'],
   synchronize: process.env.DATABASE_SYNCHRONIZE === 'true' ? true : false,
   schema: process.env.DATABASE_SCHEMA,
   migrationsRun: true,
-  migrations: [__dirname + '../../database/migrations/**/*{.ts,.js}'],
+  migrations: ['src/infrastructure/database/migrations/**/*{.ts,.js}'],
 });
 
 export default config;
