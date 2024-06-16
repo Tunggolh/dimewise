@@ -1,5 +1,5 @@
 export abstract class BaseInterfaceRepository<T> {
-  abstract create(data: T): Promise<T>;
+  abstract create(data: Partial<T>): Promise<T>;
   abstract findOne(filterCondition: any): Promise<T>;
   abstract findAll(options?: any): Promise<T[]>;
   abstract findWithRelations(relations: any): Promise<T[]>;
