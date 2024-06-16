@@ -5,13 +5,7 @@ services:
     build: .
     command: npm run start:dev
     environment:
-      - DB_TYPE=postgres
-      - PG_USER=postgres
-      - PG_PASSWORD=postgres
-      - PG_DB=dimewise
-      - PG_PORT=5432
-      - PORT=3000
-      - PG_HOST=db
+      NODE_ENV: development
     ports:
       - '3000:3000'
     depends_on:

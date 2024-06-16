@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { EnvironmentConfigModule } from '../config/environment-config/environment-config.module';
 import { AccountsModule } from './accounts.module';
+import { TypeOrmConfigModule } from '../config/typeorm/typeorm.module';
 
 @Module({
-  imports: [EnvironmentConfigModule, AccountsModule],
+  imports: [TypeOrmConfigModule, AccountsModule],
   controllers: [],
   providers: [],
 })
