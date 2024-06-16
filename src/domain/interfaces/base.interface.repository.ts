@@ -1,4 +1,4 @@
-export interface IBaseRepository<T> {
+export interface BaseInterfaceRepository<T> {
   create(data: T): Promise<T>;
   findOne(filterCondition: any): Promise<T>;
   findAll(options?: any): Promise<T[]>;

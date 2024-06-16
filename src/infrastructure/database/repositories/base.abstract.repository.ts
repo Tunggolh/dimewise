@@ -1,7 +1,7 @@
-import { IBaseRepository } from 'src/domain/interfaces/base.interface.repository';
+import { BaseInterfaceRepository } from 'src/domain/interfaces/base.interface.repository';
 import { Repository } from 'typeorm';
 
-export abstract class BaseRepository<T> implements IBaseRepository<T> {
+export abstract class BaseRepository<T> implements BaseInterfaceRepository<T> {
   protected constructor(protected readonly repository: Repository<T>) {}
 
   async create(data: T): Promise<T> {
