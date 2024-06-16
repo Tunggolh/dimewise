@@ -1,9 +1,9 @@
-export interface BaseInterfaceRepository<T> {
-  create(data: T): Promise<T>;
-  findOne(filterCondition: any): Promise<T>;
-  findAll(options?: any): Promise<T[]>;
-  findWithRelations(relations: any): Promise<T[]>;
-  update(filterCondition: any, data: any): Promise<T>;
-  remove(id: number): Promise<boolean>;
-  count(options?: any): Promise<number>;
+export abstract class BaseInterfaceRepository<T> {
+  abstract create(data: T): Promise<T>;
+  abstract findOne(filterCondition: any): Promise<T>;
+  abstract findAll(options?: any): Promise<T[]>;
+  abstract findWithRelations(relations: any): Promise<T[]>;
+  abstract update(filterCondition: any, data: any): Promise<T>;
+  abstract remove(id: number): Promise<boolean>;
+  abstract count(options?: any): Promise<number>;
 }
